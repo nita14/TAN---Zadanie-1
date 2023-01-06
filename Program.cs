@@ -17,7 +17,7 @@ namespace WebCrawlerAN
 
                 //adresy e-mail i numery telefonu
 
-                MatchCollection matchCollection = Regex.Matches(content, "[a-zA-Z0-9]+[@][a-zA-Z]+[.][a-z][a-z]|[0-9- ][a-zA-Z0-9]+[@][a-zA-Z]+[.][a-z][a-z]|[0-9][0-9] [0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]");
+                MatchCollection matchCollection = Regex.Matches(content, "[a-zA-Z0-9]+[@][a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})|[0-9][0-9] [0-9][0-9] [0-9][0-9] [0-9][0-9][0-9]");
                 foreach (var res in matchCollection)
                 {
                     Console.WriteLine(res);
